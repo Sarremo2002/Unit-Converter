@@ -5,5 +5,7 @@ body {
 
 .container {
   background-color: #6943ff;
+}
+.input {
   text-align: center;
 }
