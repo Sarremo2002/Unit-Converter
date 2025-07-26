@@ -1,3 +1,9 @@
 body {
-  margin: 0;
+  font-family: "Inter", sans-serif;
+  flex-direction: column;
+}
+
+.container {
+  background-color: #6943ff;
+  text-align: center;
 }
