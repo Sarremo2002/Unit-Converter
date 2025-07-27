@@ -1,4 +1,12 @@
-* {
+body,
+h1,
+h2,
+p,
+input,
+button,
+.container,
+.card-container,
+.card {
   margin: 0;
   padding: 0;
 }
