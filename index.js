@@ -7,24 +7,28 @@
 const length = document.getElementById("length");
 const volume = document.getElementById("volume");
 const mass = document.getElementById("mass");
-const inputValue = document.getElementById("inputValue");
 
-function convert() {}
-
-function convertLength() {
-  const feet = (inputValue * 3.281).toFixed(3);
-  const meters = (inputValue / 3.281).toFixed(3);
+function convert() {
+  const input = document.getElementById("inputValue").value;
+  convertLength(input);
+  convertVolume(input);
+  convertMass(input);
 }
 
-function convertVolume() {
-  const liters = (inputValue * 0.264).toFixed(3);
-  const gallons = (inputValue / 0.264).toFixed(3);
+function convertLength(input) {
+  const meters = (input / 3.281).toFixed(3);
+  const feet = (input * 3.281).toFixed(3);
+  length.textContent = `${input} meters = ${feet} feet | ${input} feet = ${meters} meters`;
 }
 
-function convertMass() {
-  const kilos = (inputValue * 2.204).toFixed(3);
-  const pounds = (input / 2.204).toFixed(3);
-  console.log(kilos);
+function convertVolume(input) {
+  const liters = (input * 0.264).toFixed(3);
+  const gallons = (input * 0.264).toFixed(3);
+  volume.textContent = `${input} liters = ${gallons} gallons | ${input} gallons = ${liters} liters`;
 }
 
-convertMass();
+function convertMass(input) {
+  const pounds = (input * 2.204).toFixed(3);
+  const kilos = (input / 2.204).toFixed(3);
+  mass.textContent = `${input} kilograms = ${pounds} pounds | ${input} pounds = ${kilos} kilograms`;
+}
